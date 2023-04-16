@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/getSlaveInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/listPairedDev"
+            android:text="Get Slave Info" />
+
+        <Button
+            android:id="@+id/slaveMatrix"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat8"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="#9C5C6060"
+            android:backgroundTint="#32737575"
+            android:fontFamily="sans-serif-medium"
+            android:text="Compute on slave"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/matMaster"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat8"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/slaveMatrix"
+            android:background="#9C5C6060"
+            android:backgroundTint="#32737575"
+            android:text="Compute on master"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/listPairedDev"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/bluetoothOn"
+            android:background="@color/teal_200"
+            android:backgroundTint="@color/teal_200"
+            android:fontFamily="sans-serif-medium"
+            android:text="Discover Devices"
+            android:textAllCaps="false" />
+
+        <EditText
+            android:id="@+id/mat1"
+            style="@android:style/Widget.Holo.Light.AutoCompleteTextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/connectedDevices"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/custom_textbox"
+            android:gravity="start" />
+
+
+        <EditText
+            android:id="@+id/mat2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/connectedDevices"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/mat1"
+            android:background="@drawable/custom_textbox" />
+
+        <EditText
+            android:id="@+id/mat3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat1"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/custom_textbox" />
+
+        <EditText
+            android:id="@+id/mat4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/mat3"
+            android:background="@drawable/custom_textbox" />
+
+        <EditText
+            android:id="@+id/mat5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat3"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/custom_textbox" />
+
+
+        <EditText
+            android:id="@+id/mat6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/mat5"
+            android:background="@drawable/custom_textbox" />
+
+        <EditText
+            android:id="@+id/mat7"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat5"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/custom_textbox" />
+
+        <EditText
+            android:id="@+id/mat8"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mat6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/mat7"
+            android:background="@drawable/custom_textbox" />
+
+        <Button
+            android:id="@+id/bluetoothOn"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#0000FF"
+            android:backgroundTint="#6DD5E3"
+            android:padding="10dp"
+            android:text="Bluetooth"
+            android:textAllCaps="false" />
+
+        <ListView
+            android:id="@+id/listDevices"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/listPairedDev"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listDevices"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="casual"
+            android:text="Connection status"
+            android:textColor="#0B0A0A" />
+
+        <TextView
+            android:id="@+id/received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/slaveMatrix"
+            android:layout_marginTop="5dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView7"
+            android:layout_marginStart="319dp"
+            android:layout_marginTop="-3dp"
+            android:textColor="#29D8EF" />
+
+        <TextView
+            android:id="@+id/connectionDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#29D8EF" />
+
+        <TextView
+            android:id="@+id/textViewDisplayConnected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/connectionDisplay"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="55dp"
+            android:fontFamily="casual"
+            android:text="Enter Matrix Below:"
+            android:textColor="#0C0C0C" />
+
+        <TextView
+            android:id="@+id/connectedDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDisplayConnected" />
+
+
+        <TextView
+            android:id="@+id/TV_Master"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/connectedDevices"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/mat2" />
+
+        <TextView
+            android:id="@+id/TV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_Master"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/mat4" />
+
+        <TextView
+            android:id="@+id/TV3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/mat6" />
+
+        <TextView
+            android:id="@+id/TV4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV3"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/mat8" />
+
+        <TextView
+            android:id="@+id/execTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/received"
+            android:text=""
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/power_wo"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_below="@id/execTimeText"
+            android:layout_marginLeft="10dp" />
+
+
+        <TextView
+            android:id="@+id/powDist"
+            android:layout_width="397dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/power_wo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:shadowColor="#F11616"
+            android:textColor="#BF0F0F"
+            android:textColorHighlight="#DA1919"
+            android:textColorHint="#C82121"
+            android:textColorLink="#DC1F1F" />
+
+        <TextView
+            android:id="@+id/batteryDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/listDevices"
+            android:layout_marginStart="217dp"
+            android:layout_marginTop="21dp"
+            android:text="%"
+            android:textColor="#29D8EF" />
+
+        <TextView
+            android:id="@+id/matrixOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/batteryDisplay"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="55dp"
+            android:layout_toEndOf="@+id/textViewDisplayConnected"
+            android:text="Output:" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/batteryDisplay"
+            android:layout_marginStart="217dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="casual"
+            android:text="Location"
+            android:textColor="#0E0E0E" />
+
+        <TextView
+            android:id="@+id/locationInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginStart="217dp"
+            android:layout_marginTop="-3dp"
+            android:textColor="#29D8EF" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/listDevices"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="casual"
+            android:text="Battery Level"
+            android:textColor="#0E0E0E" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listDevices"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/textView6"
+            android:fontFamily="casual"
+            android:text="Distance"
+            android:textColor="#0E0E0E" />
+
+    </RelativeLayout>
+</ScrollView>
