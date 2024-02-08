@@ -12,3 +12,4 @@ the other(s) act as a Slave device(s).
   2. Compute matrix multiplication.
   3. Distributed computation.
   4. Execution time and power consumption.
+  5. The data is stored in a txt file with the help of SQLite.
